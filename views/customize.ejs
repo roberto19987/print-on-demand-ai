@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizza la tua Immagine</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Personalizza la tua Immagine</h1>
+    <img src="<%= imageUrl %>" alt="Generated Image" style="max-width: 100%;" />
+    
+    <form method="post" action="/order">
+        <input type="hidden" name="image_url" value="<%= imageUrl %>">
+        <!-- Aggiungere ulteriori opzioni qui per la personalizzazione, come scelta di colori o testi -->
+        
+        <button type="submit">Ordina il tuo prodotto</button>
+    </form>
+</body>
+</html>
