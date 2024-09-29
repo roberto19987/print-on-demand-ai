@@ -1,0 +1,28 @@
+name: Render Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Sostituisci con la versione di Node.js che desideri utilizzare
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build  # Sostituisci con il tuo comando di build, se necessario
+
+      - name: Deploy
+        run: npm run deploy  # Sostituisci con il tuo comando di deploy, se necessario
