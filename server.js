@@ -4,6 +4,8 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const bodyParser = require('body-parser');
+const printfulApiKey = process.env.PRINTFUL_API_KEY;
+const openAiApiKey = process.env.OPENAI_API_KEY;
 
 const app = express();
 const PORT = process.env.PORT || 3000;

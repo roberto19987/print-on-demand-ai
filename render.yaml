@@ -1,0 +1,12 @@
+version: 1
+services:
+  - type: web
+    name: print-on-demand-ai
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PRINTFUL_API_KEY
+        value: 6n1KcTysv4Xie1JEOT83cFLl5K7mCvsJgKVjqRJXRzlJQQMp9nQc6B5cUz9vlzBC
+      - key: OPENAI_API_KEY
+        value: sk-CYL9w7zOCw7t6uw7QrukLiPBvF3I9CeLubMfey5A_OT3BlbkFJiBSW9LhdEeMn0gee5ee_qC35Tbdfk4BjqkO8ZAVvIA
